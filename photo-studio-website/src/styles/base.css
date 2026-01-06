@@ -1,0 +1,257 @@
+/**
+ * Base Styles - Mobile-First Design
+ * 
+ * Designed and tested from 320px screen width and above.
+ * All styles are mobile-first, with enhancements for larger screens.
+ * 
+ * Breakpoints:
+ * - 320px: Minimum supported width (base styles)
+ * - 480px: Small mobile
+ * - 640px: Large mobile / Small tablet
+ * - 1024px: Tablet / Desktop
+ * - 1280px: Large desktop
+ */
+
+:root {
+  --bg: #070b16;
+  --bg-alt: #0c1224;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-strong: rgba(255, 255, 255, 0.08);
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #f59e0b;
+  --accent-strong: #fbbf24;
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  --radius: 12px; /* Reduced from 16px for small screens */
+  --radius-pill: 999px;
+  /* Content width: 94vw max, but ensures no overflow on 320px */
+  --content-width: min(1180px, calc(100vw - 2rem));
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text);
+  background-color: var(--bg);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling on all devices */
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  background: radial-gradient(circle at 18% 20%, #162039, #0c1224 46%, #060915);
+}
+
+/* Ensure all links are properly styled */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Responsive images - always fit container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container utility - responsive padding */
+.container {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 0.75rem; /* Reduced for 320px */
+}
+
+/* Section spacing - minimal on mobile */
+.section {
+  padding: 2rem 0; /* Reduced from 3.5rem for mobile */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section heading - responsive spacing */
+.section__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced gap for mobile */
+  margin-bottom: 1.5rem; /* Reduced margin */
+  width: 100%;
+}
+
+/* Eyebrow badge - smaller on mobile */
+.section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem; /* Reduced padding */
+  border-radius: var(--radius-pill);
+  background: var(--panel);
+  color: var(--accent-strong);
+  font-weight: 600;
+  font-size: 0.75rem; /* Smaller font for mobile */
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+/* Section title - responsive font size starting from 320px */
+.section__title {
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
+  font-size: clamp(1.4rem, 5vw, 2.5rem); /* Starts smaller for 320px */
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+  word-wrap: break-word; /* Prevent text overflow */
+  overflow-wrap: break-word;
+}
+
+/* Section description - responsive max-width */
+.section__description {
+  max-width: 100%; /* Full width on mobile */
+  color: var(--muted);
+  font-size: 0.95rem; /* Slightly smaller on mobile */
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Pill badge - smaller on mobile */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem; /* Reduced padding */
+  border-radius: var(--radius-pill);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.85rem; /* Smaller font */
+}
+
+/* Button base - touch-friendly on mobile */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.75rem 1.2rem; /* Reduced padding for mobile */
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem; /* Smaller font for mobile */
+  min-height: 44px; /* Touch-friendly minimum height */
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease,
+    background 150ms ease,
+    color 150ms ease;
+  text-decoration: none;
+  white-space: nowrap; /* Prevent button text wrapping */
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #0b0f1c;
+  box-shadow: 0 16px 40px rgba(245, 158, 11, 0.28);
+}
+
+.btn-secondary {
+  border-color: var(--border);
+  color: #fff;
+  background: var(--panel);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+/* Card component - reduced padding on mobile */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem; /* Reduced from 1.4rem */
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  width: 100%; /* Ensure cards don't overflow */
+  max-width: 100%;
+}
+
+/* Responsive enhancements for larger screens */
+@media (min-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 0;
+  }
+
+  .section__heading {
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .section__eyebrow {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.9rem;
+  }
+
+  .section__description {
+    font-size: 1rem;
+  }
+
+  .pill {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section__title {
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+  }
+
+  .card {
+    padding: 1.4rem;
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "packages": [
+    {
+      "title": "Signature Portrait",
+      "price": "₹18,000",
+      "detail": "Studio session • 12 retouched photos • 48-hour preview",
+      "badge": "Popular"
+    },
+    {
+      "title": "Editorial Event",
+      "price": "₹65,000",
+      "detail": "Up to 6 hours • dual photographers • same-week highlights",
+      "badge": "Most Booked"
+    },
+    {
+      "title": "Brand Story",
+      "price": "₹95,000",
+      "detail": "Concept planning • art direction • product & lifestyle shoot",
+      "badge": "New"
+    },
+    {
+      "title": "Traditional Wedding Coverage",
+      "price": "₹1,50,000",
+      "detail": "Full-day coverage • candid & traditional photography • album included",
+      "badge": "Top Choice"
+    },
+    {
+      "title": "Engagement Ceremony",
+      "price": "₹45,000",
+      "detail": "3–4 hours • candid moments • family portraits",
+      "badge": "Popular"
+    },
+    {
+      "title": "Seer Ceremony",
+      "price": "₹30,000",
+      "detail": "Traditional rituals • detailed gift coverage • candid shots",
+      "badge": "Traditional"
+    },
+    {
+      "title": "Ear Piercing Ceremony",
+      "price": "₹28,000",
+      "detail": "Baby-focused coverage • family portraits • edited photos",
+      "badge": "Family Special"
+    },
+    {
+      "title": "Puberty Ceremony",
+      "price": "₹40,000",
+      "detail": "Rituals and candid moments • decoration coverage • family portraits",
+      "badge": "Cultural"
+    },
+    {
+      "title": "House Warming Ceremony",
+      "price": "₹25,000",
+      "detail": "Prayer coverage • family shots • home highlights",
+      "badge": "Traditional"
+    },
+    {
+      "title": "Birthday & Baby Shoot",
+      "price": "₹15,000",
+      "detail": "Theme-based shoot • props included • edited images",
+      "badge": "Kids Favorite"
+    },
+    {
+      "title": "Reception Photography",
+      "price": "₹55,000",
+      "detail": "Evening event • candid & couple portraits • edited gallery",
+      "badge": "Trending"
+    },
+    {
+      "title": "Corporate Event Coverage",
+      "price": "₹75,000",
+      "detail": "Stage moments • audience shots • branding-focused coverage",
+      "badge": "Professional"
+    }
+  ]
+}

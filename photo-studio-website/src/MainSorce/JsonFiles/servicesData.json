@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Portrait Photography",
+    "description": "Timeless portraits crafted with precision lighting, elegant compositions, and natural expressions — perfect for individuals, professionals, and creatives.",
+    "highlights": [
+      "Studio & outdoor sessions",
+      "Professional lighting setup",
+      "High-resolution retouched images"
+    ],
+    "icon": "FaCameraRetro"
+  },
+  {
+    "id": 2,
+    "title": "Wedding & Event Coverage",
+    "description": "From intimate moments to grand celebrations, we document your special day with storytelling photography that feels real, emotional, and unforgettable.",
+    "highlights": [
+      "Candid & traditional coverage",
+      "Full-day & multi-day events",
+      "Premium album options"
+    ],
+    "icon": "FaRing"
+  },
+  {
+    "id": 3,
+    "title": "Family Photography",
+    "description": "Beautiful moments with your loved ones captured naturally and creatively, preserving genuine emotions and connections.",
+    "highlights": [
+      "Indoor & outdoor shoots",
+      "Natural posing guidance",
+      "Perfect for all age groups"
+    ],
+    "icon": "FaUsers"
+  },
+  {
+    "id": 4,
+    "title": "Commercial & Brand Shoots",
+    "description": "High-impact visuals designed to elevate your brand identity — ideal for businesses, products, corporate profiles, and marketing campaigns.",
+    "highlights": [
+      "Product & lifestyle photography",
+      "Corporate headshots",
+      "Brand-focused compositions"
+    ],
+    "icon": "FaBuilding"
+  }
+]

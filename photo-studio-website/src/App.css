@@ -1,0 +1,230 @@
+/**
+ * App-Level Styles - Mobile-First
+ *
+ * Global application styles designed from 320px width.
+ * All styles optimized for small screens first.
+ *
+ * Includes:
+ * - App root layout
+ * - Home page specific styles
+ * - CTA button styles
+ * - Section stacking
+ */
+
+/* ============================================
+   APP ROOT LAYOUT
+   ============================================ */
+
+.app-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at 18% 20%, #11182f, #070c1a 42%, #030712);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.app-main {
+  flex: 1;
+  padding-bottom: 2rem; /* Reduced for mobile */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HOME PAGE STYLES
+   ============================================ */
+
+.home-page {
+  max-width: 100%; /* Full width on mobile */
+  width: 100%;
+  margin: 1.5rem auto; /* Reduced margin */
+  padding: 2rem 0.75rem; /* Minimal padding for 320px */
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.home-page__title {
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
+  font-size: clamp(1.5rem, 7vw, 3rem); /* Smaller starting size */
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem 0; /* Reduced margin */
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.home-page__description {
+  max-width: 100%; /* Full width on mobile */
+  margin: 0.75rem auto 1.5rem; /* Reduced margin */
+  color: var(--muted);
+  font-size: 0.95rem; /* Smaller on mobile */
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0 0.5rem; /* Small padding */
+}
+
+.home-page__cta {
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================================
+   CTA BUTTON STYLES
+   ============================================ */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.875rem 1.4rem; /* Reduced padding for 320px */
+  border-radius: var(--radius-pill);
+  border: none;
+  color: #0b0f1c;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  box-shadow: 0 12px 35px rgba(245, 158, 11, 0.25);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem; /* Slightly smaller on mobile */
+  min-height: 44px; /* Touch-friendly */
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    filter 150ms ease;
+  text-decoration: none;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(245, 158, 11, 0.35);
+  filter: brightness(1.03);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+/* ============================================
+   SECTION STACKING
+   ============================================ */
+
+.section-stack {
+  display: grid;
+  gap: 2rem; /* Reduced gap for mobile */
+  margin-top: 1.5rem; /* Reduced margin */
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Small Mobile (480px+) */
+@media (min-width: 480px) {
+  .app-main {
+    padding-bottom: 2.5rem;
+  }
+
+  .home-page {
+    padding: 2.5rem 1rem;
+    margin: 2rem auto;
+  }
+
+  .home-page__title {
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+  }
+
+  .home-page__description {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+
+  .cta-button {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    max-width: 320px;
+    width: auto;
+  }
+
+  .section-stack {
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Large Mobile / Tablet (640px+) */
+@media (min-width: 640px) {
+  .app-main {
+    padding-bottom: 3rem;
+  }
+
+  .home-page {
+    padding: 3rem 1.25rem;
+    max-width: var(--content-width);
+  }
+
+  .home-page__description {
+    max-width: 720px;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    padding: 0.9rem 1.6rem;
+    max-width: none;
+  }
+
+  .section-stack {
+    gap: 3rem;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .app-main {
+    padding-bottom: 4rem;
+  }
+
+  .home-page {
+    padding: 3.5rem 1.5rem;
+    margin: 2.5rem auto;
+  }
+
+  .home-page__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  .section-stack {
+    gap: 3.5rem;
+    margin-top: 3rem;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .home-page {
+    padding: 4rem 1.5rem;
+    margin: 3rem auto;
+  }
+
+  .home-page__description {
+    font-size: 1.05rem;
+  }
+}
